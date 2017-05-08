@@ -12,4 +12,3 @@ class PostToChannel(Action):
     def run(self, channel, message, subject=''):
         channel = self.get_channel(channel)
         return channel.push_note(subject, message)
-
