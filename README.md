@@ -1,21 +1,19 @@
-# StackStorm Exchange Incubator
+# Pushbullet Integration Pack
 
-### What is this?
+StackStorm integration with [Pushbullet](https://www.pushbullet.com) messaging application.
 
-This repository is a very special place where user-submitted packs get reviewed, perfected, approved, and finally transferred to the Exchange.
+## Configuration
 
-If you want to submit your pack, it's simple! **Fork this repo, create a subdirectory with your pack, and open a Pull Request.** We'll take it from here. Even if your pack is work-in-progress, you can still submit it to get advice and early feedback from our engineers! Or ping us [on Slack](https://stackstorm.com/community-signup), which is generally the best place to get advice from the StackStorm Community.
+Copy the example configuration in [pushbullet.yaml.example](./pushbullet.yaml.example)
+to `/opt/stackstorm/configs/pushbullet.yaml` and edit as required.
 
-**Pro-tip:** if you've been working on your pack for quite a while already, and want your git history and versioning preserved, add your pack repo as a submodule.
+It should contain:
 
-Before you submit a pack, make sure to read the [Create and Contribute a Pack](https://docs.stackstorm.com/reference/packs.html) section of our documentation.
+* ``apikey`` - Pushbullet API Key
 
-Here's N.E.P.T.R. the StackStorm Exchange Governor, giving you a thumbs-up:
+You can also use dynamic values from the datastore. See the
+[docs](https://docs.stackstorm.com/reference/pack_configs.html) for more info.
 
-![](http://i.imgur.com/3bqVAh0.gif)
+## Actions
 
-## Contributors License Agreement
-
-By contributing you agree that these contributions are your own (or approved by your employer) and
-you grant a full, complete, irrevocable copyright license to all users and developers of the
-project, present and future, pursuant to the license of the project.
+* ``post_to_channel`` - Post a message to a channel. Provide a channel, message and optionally a subject
