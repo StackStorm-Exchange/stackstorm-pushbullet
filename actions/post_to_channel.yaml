@@ -1,6 +1,6 @@
 ---
 name: post_to_channel
-runner_type: run-python
+runner_type: python-script
 description: Post a message to a channel
 enabled: true
 entry_point: post_to_channel.py
